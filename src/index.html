@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Homework 11</title>
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <div class="backdrop is-hidden" data-loader></div>
+
+    <header class="header">
+      <form class="search-form" id="search-form">
+        <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
+        <button type="submit"><img src="./images/lupa.svg" alt="preloader" /></button>
+      </form>
+    </header>
+
+    <div class="gallery"></div>
+
+    <button type="button" class="is-hidden" data-load></button>
+
+    <script src="./index.js" type="module"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.12.1/simple-lightbox.min.js"
+      integrity="sha512-BhE5J0LlN4PNea87xXSa65zUFN2eAiZaO2Dybd5bCUyoNAFphxpG6A5DwCD3RV0iqjqMpuXVzmbAML76ofjeyA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </body>
 </html>
